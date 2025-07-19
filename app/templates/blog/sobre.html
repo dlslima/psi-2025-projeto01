@@ -1,9 +1,11 @@
 {% extends 'blog/base.html' %}
-
+{% load static %} 
 {% block content %}
 <section class="sobre">     
     <h1>{{texto.titulo}}</h1>
-    <h2>{{texto.subtitulo}}</h2>
+    <img src="{% static 'blog/' %}{{ texto.foto }}" alt = "{{"Elenco"}}"> 
+    <p>{{texto.info}}</p>
+    <h2>{{texto.subtitulo}}</h2> 
     <p>{{texto.criadores}}</p>
 </section>
 {% endblock %}

@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #03300b;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #e50914;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  padding-top: 20px;
+  margin: 0;
+
+}
+
+h2 {
+  margin-top: 100px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: #ffffffcc;
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 52%;
+  margin: 20px auto; 
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+nav {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e50914;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #aaaaaa;
+  font-size: 0.9em;
+}
+
+
+.titulo h1 {
+    position:absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    margin: 0;
+    z-index: 1000;
+    margin-top: 20px;
+}
+
+.info {
+    text-align: center;
+}
+
+.ator-card img{
+  margin-left: 30px;
+  width: 400px;
+  margin-top: 50px;
+  border: 7px solid #f0f0f0;
+}
+
+.ator-info {
+  text-align: center;
+  transform: translateY(-400px);
+}
+
+.sobre p {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.sobre img{
+  display: block;
+  width: 380px;
+  margin: 20px auto; 
+  border-radius: 10px;
+}
+
+.sobre h2{
+  margin-top: 20px; 
+}

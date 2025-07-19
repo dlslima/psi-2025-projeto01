@@ -6,10 +6,12 @@
 <section class="atores">
     {% for ator in elenco %}
     <div class="ator-card">
-        <img src="{% static ator.foto %}" alt="{{ ator.nome }}">
+        <img src="{% static 'blog/' %}{{ ator.foto }}" alt="{{ ator.nome }}">
+        <div class="ator-info">
         <h3>{{ ator.nome }}</h3>
         <p>{{ ator.numero }} | {{ ator.idade }} anos</p>
         <p>{{ ator.nascimento }}</p>
+        <p>{{ ator.resumo }}</P> 
     </div>
     {% endfor %}
 
