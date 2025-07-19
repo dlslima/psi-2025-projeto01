@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="titulo">
+    <h1>{{inicio.titulo}}</h1>
+    <h2>{{inicio.subtitulo}}</h2>
+
+
+<section class="info">
+    <img src="{% static 'blog/elenco.jpg' %}" alt="Elenco de Round 6">
+    <p>{{inicio.info}}</p>
+</section>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <title>{% block title %} Round 6 {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'atores' %}">Atores</a>
+            <a href="{% url 'sobre' %}">Sobre</a>
+        </nav>
+    </header>
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <footer>
+        &copy; 2025 Danilo Lima e Rafael dos Santos
+    </footer>
+</body>
+</html>
