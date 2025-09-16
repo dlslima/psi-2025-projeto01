@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def index(request):
 
-    inicio = {"titulo": "ROUND 6", "subtitulo": "A melhor série da Netflix!", "info": "Round 6 é uma série sul-coreana que segue um grupo de 456 participantes em dificuldades financeiras que aceitam um convite para participar de um jogo mortal com a chance de ganhar 45,6 bilhões de wons. Os jogos são baseados em brincadeiras infantis, mas as apostas são altas e os perdedores enfrentam consequências fatais. A trama explora temas de moralidade e sobrevivência em um ambiente extremo."}
+    inicio = {"titulo": "ROUND 6", "subtitulo": "A melhor série da Netflix!", "info": "Round 6 é uma série sul-coreana que segue um grupo de 456 participantes em dificuldades financeiras que aceitam um convite para participar de um jogo mortal com a chance de ganhar 45,6 bilhões de wons. Os jogos são baseados em brincadeiras infantis, mas as apostas são altas e os perdedores enfrentam consequências fatais. A trama explora temas de moralidade e sobrevivência em um ambiente extremo. Round 6 foi lançada em 17 de Setembro de 2021 pela Netflix, criada por Hwang Dong-hyunk. A série se tornou um fenômeno mundial, alcançando mais de 142 milhões de telespectadores no primeiro mês, o que a tornou a produção mais vista da história da plataforma. Além disso, recebeu indicações e prêmios importantes, incluindo o Emmy de Melhor Ator para Lee Jung-jae."}
 
     return render(request, "blog/index.html", {"inicio":inicio})
 

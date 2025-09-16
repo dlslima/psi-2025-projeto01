@@ -82,6 +82,8 @@ footer {
 }
 
 .ator-info {
+  margin-left: 500px;
+  margin-top: 90px;
   text-align: center;
   transform: translateY(-400px);
 }
