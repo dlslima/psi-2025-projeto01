@@ -2,18 +2,18 @@
 {% load static %}
 {% block content %}
 
-<h1 style="text-align: center;">Elenco da 1ª Temporada</h1> 
-<section class="atores">
+<h1>Elenco da 1ª Temporada</h1>
+
+<section class="ator-container">
     {% for ator in elenco %}
-    <div class="ator-card">
+    <article class="ator-card">
         <img src="{% static 'blog/' %}{{ ator.foto }}" alt="{{ ator.nome }}">
-        <div class="ator-info">
         <h3>{{ ator.nome }}</h3>
         <p>{{ ator.numero }} | {{ ator.idade }} anos</p>
         <p>{{ ator.nascimento }}</p>
-        <p>{{ ator.resumo }}</P> 
-    </div>
+        <p>{{ ator.resumo }}</p>
+    </article>
     {% endfor %}
-
 </section>
+
 {% endblock %}

@@ -29,3 +29,4 @@ def sobre(request):
 
     texto = {"titulo": "SITE SOBRE ROUND 6", "foto": "squid-game-round-6-temporada.jpg", "info": "Neste site você encontrará: Sinopse rápida da trama, Elenco, personagens principais e suas informações, tudo em um só lugar para fãs e amantes de Round 6!", "subtitulo":"Um site feito por:", "criadores": "Danilo Lima e Rafael dos Santos"}
     return render(request, "blog/sobre.html", {'texto':texto})
+

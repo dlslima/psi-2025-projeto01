@@ -1,11 +1,64 @@
 {% extends 'blog/base.html' %}
-{% load static %} 
+{% load static %}
+
 {% block content %}
-<section class="sobre">     
-    <h1>{{texto.titulo}}</h1>
-    <img src="{% static 'blog/' %}{{ texto.foto }}" alt = "{{"Elenco"}}"> 
-    <p>{{texto.info}}</p>
-    <h2>{{texto.subtitulo}}</h2> 
-    <p>{{texto.criadores}}</p>
+<section class="sobre">
+    <header>
+        <h1>{{ texto.titulo }}</h1>
+        {% if texto.subtitulo %}
+            <h2>{{ texto.subtitulo }}</h2>
+        {% endif %}
+    </header>
+
+    {% if texto.foto %}
+        <figure>
+            <img src="{% static 'blog/' %}{{ texto.foto }}" alt="Imagem de {{ texto.titulo }}">
+            {% if texto.legenda %}
+                <figcaption>{{ texto.legenda }}</figcaption>
+            {% endif %}
+        </figure>
+    {% endif %}
+
+    {% if texto.info %}
+        <p>{{ texto.info }}</p>
+    {% endif %}
+
+    {% if texto.criadores %}
+        <p><strong>Criadores:</strong> {{ texto.criadores }}</p>
+    {% endif %}
+</section>
+
+<hr>
+
+<section class="sobre-projeto">
+    <h1>Sobre o Projeto</h1>
+
+    <p>
+        Este site foi desenvolvido como parte de um projeto acadêmico do curso de
+        <strong>Informática para Internet</strong>.
+        O objetivo é praticar e demonstrar o uso de tecnologias modernas para a criação de aplicações web dinâmicas,
+        incluindo <strong>HTML</strong>, <strong>CSS</strong> e o framework <strong>Django</strong>.
+    </p>
+
+    <p>
+        A proposta é simples: apresentar informações sobre séries de destaque, seus personagens e curiosidades,
+        organizadas em uma navegação intuitiva. O site também conta com seções dedicadas a descrições, elenco e detalhes adicionais.
+    </p>
+
+    <h2>Autores</h2>
+    <ul>
+        <li><strong>Danilo</strong> – Responsável pela estrutura do projeto e implementação do backend em Django.</li>
+        <li><strong>Danilo</strong> – Responsável pelo design, estilização em CSS e organização do layout.</li>
+        <li><strong>Rafael</strong> – Responsável pelo conteúdo, inserção de imagens e revisão final.</li>
+    </ul>
+
+    <p>
+        Projeto desenvolvido em <strong>2025</strong>, com dedicação e aprendizado contínuo, mostrando a importância do
+        trabalho em equipe e da aplicação prática dos conhecimentos adquiridos em sala de aula.
+    </p>
+
+    <p>
+        Agradecemos por visitar nosso site! 🚀
+    </p>
 </section>
 {% endblock %}

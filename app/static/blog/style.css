@@ -1,43 +1,48 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #03300b;
-  color: #f0f0f0;
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0px;
-  line-height: 1.6;
+  padding: 0;
 }
 
+/* ===== Body ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #021a06, #03300b);
+  color: #f0f0f0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background 0.5s;
+}
+
+/* ===== Headings ===== */
 h1 {
   color: #e50914;
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 0.2em;
-  padding-top: 20px;
-  margin: 0;
-
+  margin: 1em 0 0.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
-  margin-top: 100px;
   text-align: center;
-  font-weight: normal;
-  font-size: 1.8rem;
+  font-weight: 400;
+  font-size: 2rem;
   color: #ffffffcc;
-
+  margin: 2em 0 1em;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  width: 52%;
-  margin: 20px auto; 
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-}
-
+/* ===== Navegação ===== */
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 15px 30px;
   text-align: right;
-  margin-bottom: 30px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 nav a {
@@ -45,62 +50,113 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
   color: #e50914;
+  transform: scale(1.1);
 }
 
+/* ===== Imagens ===== */
+img {
+  display: block;
+  max-width: 90%;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+
+/* ===== Footer ===== */
 footer {
   text-align: center;
   margin-top: 50px;
   color: #aaaaaa;
   font-size: 0.9em;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-
-.titulo h1 {
-    position:absolute;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    margin: 0;
-    z-index: 1000;
-    margin-top: 20px;
+/* ===== Cards de atores ===== */
+.ator-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
 }
 
-.info {
-    text-align: center;
-}
-
-.ator-card img{
-  margin-left: 30px;
-  width: 400px;
-  margin-top: 50px;
-  border: 7px solid #f0f0f0;
-}
-
-.ator-info {
-  margin-left: 500px;
-  margin-top: 90px;
+.ator-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 25px 20px;
+  max-width: 300px;
   text-align: center;
-  transform: translateY(-400px);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+.ator-card img {
+  width: 100%;
+  border: 4px solid #f0f0f0;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.ator-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ator-card h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.ator-card p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ===== Seção sobre ===== */
+.sobre {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
 }
 
 .sobre p {
-  text-align: center;
-  align-content: center;
-  align-items: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #eee;
+  text-align: justify;
+  line-height: 1.8;
 }
 
-.sobre img{
-  display: block;
-  width: 380px;
-  margin: 20px auto; 
-  border-radius: 10px;
-}
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
 
-.sobre h2{
-  margin-top: 20px; 
+  nav {
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .ator-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

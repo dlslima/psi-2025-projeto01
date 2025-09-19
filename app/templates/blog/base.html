@@ -1,14 +1,15 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'blog/style.css' %}">
-    <title>{% block title %} Round 6 {% endblock %}</title>
+    <title>{% block title %}Round 6{% endblock %}</title>
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <nav>
             <a href="{% url 'index' %}">Início</a>
@@ -17,10 +18,14 @@
         </nav>
     </header>
 
-    <main>{% block content %} {% endblock %}</main>
+    <!-- Conteúdo principal -->
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
 
+    <!-- Rodapé -->
     <footer>
-        &copy; 2025 Danilo Lima e Rafael dos Santos
+        <p>&copy; 2025 Danilo Lima e Rafael dos Santos</p>
     </footer>
 </body>
 </html>
