@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% if texto %}
 <section class="sobre">
     <header>
         <h1>{{ texto.titulo }}</h1>
@@ -27,6 +28,18 @@
         <p><strong>Criadores:</strong> {{ texto.criadores }}</p>
     {% endif %}
 </section>
+{% else %}
+<section class="sobre">
+    <header>
+        <h1>Sobre Round 6</h1>
+        <h2>Nenhum conteúdo cadastrado</h2>
+    </header>
+    <p style="text-align: center; padding: 40px;">
+        Por favor, cadastre o conteúdo da página sobre através do 
+        <a href="{% url 'admin:index' %}" style="color: #e50914;">Django Admin</a>.
+    </p>
+</section>
+{% endif %}
 
 <hr>
 

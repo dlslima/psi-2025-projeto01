@@ -2,14 +2,30 @@
 {% load static %}
 {% block content %}
 
+{% if inicio %}
 <section class="titulo">
     <h1>{{ inicio.titulo }}</h1>
-    <h2>{{ inicio.subtitulo }}</h2>
+    {% if inicio.subtitulo %}
+        <h2>{{ inicio.subtitulo }}</h2>
+    {% endif %}
 </section>
 
 <section class="info">
     <img src="{% static 'blog/squid-game-round-6-temporada-1.jpg' %}" alt="Elenco de Round 6"> 
     <p>{{ inicio.info }}</p>
 </section>
+{% else %}
+<section class="titulo">
+    <h1>Bem-vindo ao Round 6</h1>
+    <h2>Nenhum conteúdo cadastrado</h2>
+</section>
+
+<section class="info">
+    <p style="text-align: center; padding: 40px;">
+        Por favor, cadastre o conteúdo da página inicial através do 
+        <a href="{% url 'admin:index' %}" style="color: #e50914;">Django Admin</a>.
+    </p>
+</section>
+{% endif %}
 
 {% endblock %}

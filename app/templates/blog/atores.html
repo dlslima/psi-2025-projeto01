@@ -4,6 +4,7 @@
 
 <h1>Elenco da 1ª Temporada</h1>
 
+{% if elenco %}
 <section class="ator-container">
     {% for ator in elenco %}
     <article class="ator-card">
@@ -15,5 +16,13 @@
     </article>
     {% endfor %}
 </section>
+{% else %}
+<section class="info">
+    <p style="text-align: center; padding: 40px;">
+        Nenhum ator cadastrado ainda. Por favor, cadastre os atores através do 
+        <a href="{% url 'admin:index' %}" style="color: #e50914;">Django Admin</a>.
+    </p>
+</section>
+{% endif %}
 
 {% endblock %}
